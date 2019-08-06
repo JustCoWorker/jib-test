@@ -62,6 +62,15 @@
 				<artifactId>jib-maven-plugin</artifactId>
 				<version>1.4.0</version>
 				<configuration>
+					<container>
+						<jvmFlags>
+							<jvmFlag>-Xms512m</jvmFlag>
+						</jvmFlags>
+						<ports>
+							<port>8080</port>
+						</ports>
+						<useCurrentTimestamp>true</useCurrentTimestamp>
+					</container>
 					<from>
 						<image>openjdk:alpine</image>
 					</from>
